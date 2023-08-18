@@ -1,7 +1,7 @@
 import React from 'react'
 import footerlogo from '../img/footerlogo.png'
 import { FaFacebook, FaInstagramSquare, FaPinterest, FaYoutube, FaPhoneAlt, FaSearchLocation } from "react-icons/fa";
-
+import { Link } from 'react-router-dom';
 const currentDate = new Date();
 const currentYear = currentDate.getFullYear();
 
@@ -17,19 +17,19 @@ export const Footer = () => {
         </div>
         <div className='flex flex-col gap-3 w-300 '>
             <h3 className='text-gray-700 mb-2'>Usefull Links</h3>
-            <ul className='space-y-2'>
-                <li className="text-sm text-gray-600 cursor-pointer">Home</li>
-                <li className="text-sm text-gray-600 cursor-pointer">About us</li>
-                <li className="text-sm text-gray-600 cursor-pointer">Contact us</li>
-                <li className="text-sm text-gray-600 cursor-pointer">Privacy Policy</li>
-                <li className="text-sm text-gray-600 cursor-pointer">Return Policy</li>
+            <ul className='space-y-2 flex flex-col'>
+                <Link to={'/'} className="text-sm text-gray-600 cursor-pointer">Home</Link>
+                <Link to={'/about'} className="text-sm text-gray-600 cursor-pointer">About us</Link>
+                <Link to={'/contact'} className="text-sm text-gray-600 cursor-pointer">Contact us</Link>
+                <Link to={'/privacy-policy'} className="text-sm text-gray-600 cursor-pointer">Privacy Policy</Link>
+                <Link to={'/refund'} className="text-sm text-gray-600 cursor-pointer">Refund & Return Policy</Link>
             </ul>
         </div>
         <div className='flex flex-col gap-3 w-300 '>
             <h3 className='text-gray-700 mb-2'>About us</h3>
-            <ul className='space-y-2'>
-                <li className="text-sm text-gray-600 cursor-pointer">About us</li>
-                <li className="text-sm text-gray-600 cursor-pointer">Contact us</li>
+            <ul className='space-y-2 flex flex-col'>
+                <Link to={'/about'} className="text-sm text-gray-600 cursor-pointer">About us</Link>
+                <Link to={'/contact'} className="text-sm text-gray-600 cursor-pointer">Contact us</Link>
             </ul>
                 <div className='flex flex-row gap-2'>
                     <FaPhoneAlt className='text-[#f98027]'/>
@@ -45,8 +45,8 @@ export const Footer = () => {
             <h3 className='text-gray-700 mb-2'>Follow us</h3>
             <div className='flex flex-col gap-2'>
                 <p className='text-sm text-gray-500 '>Subscribe us</p>
-                <form action="">
-                    <input type="email" placeholder='Enter your email' className='text-sm text-gray-500 bg-[#f7f7f7] px-4 py-2 outline-none border-none' />
+                <form action="" className='shadow-sm border-none rounded-xl justify-center items-center'>
+                    <input type="email" placeholder='Enter your email' className='text-sm text-gray-500 rounded-md bg-[#f7f7f7] px-4 py-2 outline-none border-none' />
                     <button type='submit' className=' text-sm text-gray-900 bg-gradient-to-br from-orange-400 to-orange-500 w-full md:w-auto px-2 py-2  rounded-lg hover:shadow-lg transition-all ease-in-out duration-100 mt-2'>Subscribe</button>
                 </form>
 
@@ -61,7 +61,7 @@ export const Footer = () => {
 
     </footer>
     <div className='flex justify-center items-center py-2 px-2 bg-[#d4d4d4]'>
-        <p className='text-sm text-gray-800'>©{currentYear} YumYield. All Rights Reserved.</p>
+        <p className='text-sm text-gray-800 tracking-wider'>©{currentYear} YumYield. All Rights Reserved.</p>
     </div>
     </>
   )

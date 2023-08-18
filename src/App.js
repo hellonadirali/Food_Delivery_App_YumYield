@@ -6,6 +6,11 @@ import { useStateValue } from "./context/StateProvider";
 import { getAllFoodItems } from "./utils/firebaseFunctions";
 import { actionType } from "./context/reducer";
 import Footer from "./components/Footer";
+import Aboutus from "./components/Aboutus";
+import Contact from "./components/Contact";
+import Privacypolicy from "./components/Privacypolicy";
+import Refund from "./components/Refund";
+
 
 
 const App = () => {
@@ -33,6 +38,10 @@ const App = () => {
           <Routes>
             <Route path="/*" element={<MainContainer />} />
             <Route path="/createItem" element={<CreateContainer />} />
+            <Route path="/about" element={<Aboutus/>} />
+            <Route path="/contact" element={<Contact/>}/>
+            <Route path="/privacy-policy" element={<Privacypolicy/>}/>
+            <Route path="/refund" element={<Refund/>}/>
           </Routes>
         </main>
         <Footer/>

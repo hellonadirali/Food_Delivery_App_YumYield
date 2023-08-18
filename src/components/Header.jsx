@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { MdShoppingBasket, MdAdd, MdLogout } from "react-icons/md";
 import { motion } from "framer-motion";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-// import { app } from "../firebase.config";
 import {app} from '../firbase.config'
 import Logo from "../img/logo.png";
 import Avatar from "../img/avatar.png";
@@ -69,14 +68,14 @@ const Header = () => {
             <Link to ={"/"} className="text-md text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
               Home
             </Link>
-            <Link to ={"/menu"} className="text-md text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
-              Menu
-              </Link>
             <Link to ={"/about"} className="text-md text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
               About Us
               </Link>
-            <Link to ={"/#service"} className="text-md text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
-              Service
+            <Link to ={"/contact"} className="text-md text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
+              Contact us
+            </Link>
+            <Link to ={"/privacy-policy"} className="text-md text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
+              Privacy Policy
             </Link>
           </motion.ul>
 
