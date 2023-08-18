@@ -5,6 +5,7 @@ import { CreateContainer, Header, MainContainer } from "./components";
 import { useStateValue } from "./context/StateProvider";
 import { getAllFoodItems } from "./utils/firebaseFunctions";
 import { actionType } from "./context/reducer";
+import Footer from "./components/Footer";
 
 
 const App = () => {
@@ -34,6 +35,7 @@ const App = () => {
             <Route path="/createItem" element={<CreateContainer />} />
           </Routes>
         </main>
+        <Footer/>
       </div>
     </AnimatePresence>
   );
